@@ -15,6 +15,8 @@ The bot should be able to:
   2. Add random meme celebration video or something dumb too
 - [ ] Prompt/ping user when it is their turn to host in rotation
   1. Example bot message: `Hey, @Joe! It's your turn to be host of game night for the week of <upcomingWeek>! On what date and time do you want to host?`
+     1. Universal time/date format to use, `19:00 EST 07/25`
+        1. Military time format/two digit month and day
 - [ ] Add/remove/skip people from the game night rotation
   1. Example rotation: `4mMan > Grindclock > Joe > Almirius > Askarathol`
   2. Commands
@@ -28,3 +30,13 @@ The bot should be able to:
      3. Skip: `!gn rotation skip <username>`
         1. Would allow you to skip someone in rotation if they want to stay, but cannot host.
         2. Would move on to next person in the list and prompt them and keep going until someone says they can host.
+- [ ] Add/remove games from Master Game List
+  1. Commands
+     1. Add game:
+        1. User command: `!gn game add <gameName> <maxPlayers>`
+     2. Remove game:
+        1. User command: `!gn game rm <gameName> <maxPlayers>`
+
+Lower priority:
+
+- [ ] Adding/removing people from Prize Pool
