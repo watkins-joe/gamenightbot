@@ -2,6 +2,8 @@
 
 The bot should be able to:
 
+- [ ] Display bot commands
+  1. User command: `!gn help`
 - [ ] Update the game night leaderboard with the new winner(s)
   1. User command: `!gn winner <username1> <username2> ... <usernameN>`
   2. Can handle multiple winners, each separated by a space
@@ -17,6 +19,22 @@ The bot should be able to:
   1. Example bot message: `Hey, @Joe! It's your turn to be host of game night for the week of <upcomingWeek>! On what date and time do you want to host?`
      1. Universal time/date format to use, `19:00 EST 07/25`
         1. Military time format/two digit month and day
+- [ ] Add Game Night events to the server automatically after
+  1. Events need to have the following info:
+     1. Location:
+        1. Voice Channel
+        2. `Game Night!!!`
+     2. Topic = `Game Nite!!!`
+     3. Start Date = `Jul 9, 2023`
+     4. Time = `8:00 PM`
+     5. Description
+        1. Host = `@<username>`
+        2. ```
+           Host @<username>
+           <time in host time zone>
+           <time in your time zone>
+           ```
+     6. Cover Image = `https://static.kinguin.net/cdn-cgi/image/w=750,q=80,fit=scale-down,f=auto/media/category/1/-/1-1024_1382.jpg`
 - [ ] Add/remove/skip people from the game night rotation
   1. Example rotation: `4mMan > Grindclock > Joe > Almirius > Askarathol`
   2. Commands
