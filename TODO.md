@@ -6,6 +6,7 @@ The bot should be able to:
   1. User command: `!gn help`
 - [ ] Update the game night leaderboard with the new winner(s)
   1. User command: `!gn winner <username1> <username2> ... <usernameN>`
+     1. May want to make it so that only the host of game nite that night can run this command, not sure yet
   2. Can handle multiple winners, each separated by a space
 - [ ] Keep track games remaining in each game night season. Seasons follow the actual calendar seasons of spring 🌸, summer ☀️, fall 🍂, and winter ❄️.
   1.  This is usually written at the bottom of the leaderboard, but can be anywhere on the leaderboard

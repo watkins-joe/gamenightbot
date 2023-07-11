@@ -27,8 +27,10 @@ async def on_ready():
 # When !gn command is entered
 @bot.command(name="gn")
 async def on_gn(ctx, *args):
+    # can access tuples with indexes, will use this to call functions to process each different command
+    print(args[0])
     arguments = ", ".join(args)
-    await ctx.send(f'i read your command. args: {arguments}')
+    await ctx.send(f'i read your command! i read {len(args)} args and they are: {arguments}')
 
 # Run bot
 bot.run(token=TOKEN)
