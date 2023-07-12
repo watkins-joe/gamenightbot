@@ -2,6 +2,7 @@ import discord
 import os
 from discord.ext import commands
 from dotenv import load_dotenv
+from functions import process_winners
 
 # Load token from env variable
 load_dotenv()
@@ -28,9 +29,14 @@ async def on_ready():
 @bot.command(name="gn")
 async def on_gn(ctx, *args):
     # can access tuples with indexes, will use this to call functions to process each different command
-    print(args[0])
+    command = args[0]
+    match command:
+        case "winners":
+            await process_winners(ctx, args)
+
+    print("command: ", args[0])
     arguments = ", ".join(args)
-    await ctx.send(f'i read your command! i read {len(args)} args and they are: {arguments}')
+    # await ctx.send(f'i read your command! i read {len(args)} args and they are: {arguments}')
 
 # Run bot
 bot.run(token=TOKEN)

@@ -8,6 +8,8 @@ The bot should be able to:
   1. User command: `!gn winner <username1> <username2> ... <usernameN>`
      1. May want to make it so that only the host of game nite that night can run this command, not sure yet
   2. Can handle multiple winners, each separated by a space
+     1. Need to verify spelling of users to properly assign wins to them.
+        1. Keep users in a `dict` and do a look-up?
 - [ ] Keep track games remaining in each game night season. Seasons follow the actual calendar seasons of spring 🌸, summer ☀️, fall 🍂, and winter ❄️.
   1.  This is usually written at the bottom of the leaderboard, but can be anywhere on the leaderboard
 - [ ] Keep track of the previous game night season champions
