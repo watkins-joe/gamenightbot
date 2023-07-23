@@ -3,6 +3,7 @@ import os
 from discord.ext import commands
 from dotenv import load_dotenv
 from functions import process_winners
+from template import template
 
 # Load token from env variable
 load_dotenv()
@@ -33,6 +34,8 @@ async def on_gn(ctx, *args):
     match command:
         case "winners":
             await process_winners(ctx, args)
+        case "lb":
+            await ctx.send(template)
 
     print("command: ", args[0])
     arguments = ", ".join(args)
