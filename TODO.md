@@ -51,6 +51,8 @@ The bot should be able to:
      3. Skip: `!gn rotation skip <username>`
         1. Would allow you to skip someone in rotation if they want to stay, but cannot host.
         2. Would move on to next person in the list and prompt them and keep going until someone says they can host.
+  3. Implement a linked list to keep track of who is hosting for the next game night session
+     1. Each user points to the next user and the last user points to the first user (head)
 - [ ] Add/remove games from Master Game List
   1. Commands
      1. Add game:
