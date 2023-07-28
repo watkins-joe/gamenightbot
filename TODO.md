@@ -22,6 +22,9 @@ The bot should be able to:
   1. Example bot message: `Hey, @Joe! It's your turn to be host of game night for the week of <upcomingWeek>! On what date and time do you want to host?`
      1. Universal time/date format to use, `19:00 EST 07/25`
         1. Military time format/two digit month and day
+- [ ] Accept user input for choosing their date and time for hosting game night
+  1. User command: `!gn host 07/27 4PM`
+     1. Use `EST` as the default time zone, could try to get the time zone of the host
 - [ ] Add Game Night events to the server automatically after
   1. Events need to have the following info:
      1. Location:
@@ -38,6 +41,8 @@ The bot should be able to:
            <time in your time zone>
            ```
      6. Cover Image = `https://static.kinguin.net/cdn-cgi/image/w=750,q=80,fit=scale-down,f=auto/media/category/1/-/1-1024_1382.jpg`
+- [x] Implement the game night rotation without hard-coding it as a string
+  - _Completed 7/28/23_
 - [ ] Add/remove/skip people from the game night rotation
   1. Example rotation: `4mMan > Grindclock > Joe > Almirius > Askarathol`
   2. Commands
