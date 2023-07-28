@@ -68,6 +68,8 @@ class PlayerRotation:
             `ValueError`: If the `player` name is not found in the rotation.
         """
 
+        # FIXME: handle removing player if they are the head of the LL, currently incorrectly raises ValueError because we are only looking at `current_player.next.name`.
+
         current_player = self.head
         while current_player.next:
             if current_player.next.name == player_name:
@@ -100,6 +102,8 @@ print(rotation.get_order())      # meme > Askar > 4mMan
 rotation.add_player(PlayerNode('Greenkid'))
 print(rotation.get_order())      # meme > Askar > 4mMan > Greenkid
 
+rotation.remove_player("Askar")
+print(rotation.get_order())      # meme > 4mMan > Greenkid
 # print(player_order)
 
 # Debug, ensure linked list is setup properly
