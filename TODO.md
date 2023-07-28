@@ -42,21 +42,24 @@ The bot should be able to:
            ```
      6. Cover Image = `https://static.kinguin.net/cdn-cgi/image/w=750,q=80,fit=scale-down,f=auto/media/category/1/-/1-1024_1382.jpg`
 - [x] Implement the game night rotation without hard-coding it as a string
-  - _Completed 7/28/23_
-- [ ] Add/remove/skip people from the game night rotation
   1. Example rotation: `4mMan > Grindclock > Joe > Almirius > Askarathol`
-  2. Commands
-     1. Add: `!gn rotation add <username>`
-        1. Example: `!gn rotation add <username>`
-        2. This would transform rotation to be `4mMan > Grindclock > Joe > Almirius > Askarathol > <username>`
-        3. Could use linked list and modify the pointers to change order around instead of just using an array to preserve order
-     2. Remove: `!gn rotation rm <username>`
-        1. Example: `!gn rotation rm Grindclock`
-        2. This would transform rotation to be `4mMan > Joe > Almirius > Askarathol`
-     3. Skip: `!gn rotation skip <username>`
-        1. Would allow you to skip someone in rotation if they want to stay, but cannot host.
-        2. Would move on to next person in the list and prompt them and keep going until someone says they can host.
-  3. Implement a linked list to keep track of who is hosting for the next game night session
+  - _Completed 7/28/23_
+-
+- [ ] Add/remove/skip people from the game night rotation
+  1. Commands
+  - [x] Add: `!gn rotation add <username>`
+    1. Example: `!gn rotation add <username>`
+    2. This would transform rotation to be `4mMan > Grindclock > Joe > Almirius > Askarathol > <username>`
+    3. Could use linked list and modify the pointers to change order around instead of just using an array to preserve order
+       1. _Completed 7/28/23_
+  - [x] Remove: `!gn rotation rm <username>`
+    1.  Example: `!gn rotation rm Grindclock`
+    2.  This would transform rotation to be `4mMan > Joe > Almirius > Askarathol`
+        1.  _Completed 7/28/23_
+  - [ ] Skip: `!gn rotation skip <username>`
+    1.  Would allow you to skip someone in rotation if they want to stay, but cannot host.
+    2.  Would move on to next person in the list and prompt them and keep going until someone says they can host.
+  1. Implement a linked list to keep track of who is hosting for the next game night session
      1. Each user points to the next user and the last user points to the first user (head)
 - [ ] Add/remove games from Master Game List
   1. Commands
