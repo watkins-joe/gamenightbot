@@ -2,7 +2,11 @@
 
 
 class PlayerNode:
-    """A player in the `PlayerRotation` class."""
+    """A player in the `PlayerRotation` class.
+
+    Args:
+        `name`: The name of the player as a `string`.
+    """
 
     def __init__(self, name):
         self.name = name
@@ -14,9 +18,6 @@ class PlayerNode:
 
 class PlayerRotation:
     """Singly linked list of `PlayerNodes` with each player pointing to the next in the rotation.
-
-    Args:
-        `players`: A `list` of `PlayerNodes`.
     """
 
     def __init__(self):
@@ -87,32 +88,3 @@ class PlayerRotation:
         """
 
         return " > ".join([player.name for player in self])
-
-
-# Debugging
-
-rotation = PlayerRotation()
-
-rotation.add_player(PlayerNode('meme'))
-print(rotation.get_order())      # meme
-rotation.add_player(PlayerNode('Askar'))
-print(rotation.get_order())      # meme > Askar
-rotation.add_player(PlayerNode('4mMan'))
-print(rotation.get_order())      # meme > Askar > 4mMan
-rotation.add_player(PlayerNode('Greenkid'))
-print(rotation.get_order())      # meme > Askar > 4mMan > Greenkid
-
-rotation.remove_player("Askar")
-print(rotation.get_order())      # meme > 4mMan > Greenkid
-# print(player_order)
-
-# Debug, ensure linked list is setup properly
-# for player in rotation:
-#     print(f"{player} points to {player.next}")
-
-# rotation.add_player(PlayerNode('test'))
-# order_before = rotation.get_order()     # meme > Askar > 4mMan > Greenkid > test
-# print(order_before)
-# rotation.remove_player('TEST')
-# order_after = rotation.get_order()      # meme > 4mMan > Greenkid > test
-# print(order_after)
